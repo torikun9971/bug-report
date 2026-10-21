@@ -1,0 +1,9 @@
+headers = AL/al.h AL/alc.h
+
+compilerOpts.mingw_x64=-Ivcpkg_installed/x64-mingw-dynamic/include
+linkerOpts.mingw_x64=-Lvcpkg_installed/x64-mingw-dynamic/lib -lOpenAL32
+
+---
+// workaround for https://youtrack.jetbrains.com/issue/KTIJ-35493/K-N-Forward-Declarations-Dont-Work
+typedef struct ALCdevice {};
+typedef struct ALCcontext {};
